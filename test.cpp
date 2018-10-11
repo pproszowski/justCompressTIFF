@@ -11,9 +11,12 @@ main(int argc, char* argv[]){
     uint32 width;
     uint32 height;
     uint32 depth = 0;
+    uint32 compression;
 
     TIFFGetField(tif, TIFFTAG_IMAGEWIDTH, &width);
     TIFFGetField(tif, TIFFTAG_IMAGELENGTH, &height);
+    TIFFGetField(tif, TIFFTAG_COMPRESSION, &compression);
+
 
     do {
       depth++;
@@ -22,6 +25,7 @@ main(int argc, char* argv[]){
     std::cout<<"height: "<<height<<std::endl;
     std::cout<<"weight: "<<width<<std::endl;
     std::cout<<"depth: "<<depth<<std::endl;
+    std::cout<<"compression: "<<compression<<std::endl;
 	}
 
 	TIFFClose(tif);
