@@ -23,7 +23,7 @@ main(int argc, char* argv[]){
     } while (TIFFReadDirectory(tif));
 
     std::cout<<"height: "<<height<<std::endl;
-    std::cout<<"weight: "<<width<<std::endl;
+    std::cout<<"width: "<<width<<std::endl;
     std::cout<<"depth: "<<depth<<std::endl;
     std::cout<<"compression: "<<compression<<std::endl;
 	}
